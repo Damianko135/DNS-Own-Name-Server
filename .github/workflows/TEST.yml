@@ -1,3 +1,4 @@
+name: Build and Configure dnsmasq
 on:
   push:
     branches:
@@ -5,8 +6,6 @@ on:
       - master
 
   workflow_dispatch:
-
-name: Build
 
 jobs:
   build:
@@ -19,5 +18,11 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y dnsmasq
-          sudo systemctl enable dnsmasq
-          sudo systemctl start dnsmasq
+
+      - name: Configure dnsmasq
+        run: |
+          # Modify dnsmasq configuration to use a different port
+          sudo sed -i 's/#port=5353/port=5354/' /etc/dnsmasq.conf
+
+      - name: Start dnsmasq
+        run: sudo systemctl start dnsmasq
