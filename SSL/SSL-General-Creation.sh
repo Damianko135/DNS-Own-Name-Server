@@ -16,8 +16,8 @@ fi
 
 # Ensure that a domain name is provided
 if [ -z "$DOMAIN_NAME" ]; then
-    echo "Error: Domain name not provided."
-    exit 1
+    DOMAIN_NAME="example.com"
+
 fi
 
 # Check if openssl is installed
