@@ -22,7 +22,8 @@ fi
 
 # Check if openssl is installed
 if ! command -v openssl &> /dev/null; then
-    sudo apt-get install openssl
+    sudo apt-get update
+    sudo apt-get install -y openssl
 fi
 
 ## Create CA certs
