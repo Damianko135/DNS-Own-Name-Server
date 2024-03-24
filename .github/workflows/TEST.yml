@@ -16,4 +16,7 @@ jobs:
       - name: Use the script
         run: |
           sudo chmod +x ./SSL/SSL-General-Creation.sh
-          sudo ./SSL/SSL-General-Creation.sh "My_Certificate" "example.com"
+          sudo ./SSL/SSL-General-Creation.sh "$CERTIFICATE_NAME" "$DOMAIN_NAME"
+        env:
+          CERTIFICATE_NAME: My_Certificate
+          DOMAIN_NAME: example.com
