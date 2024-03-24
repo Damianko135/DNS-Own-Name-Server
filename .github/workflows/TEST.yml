@@ -14,9 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install dnsmasq
+      - name: Use the script
         run: |
-          sudo apt-get update
-          sudo apt-get install -y git
-          git clone git://thekelleys.org.uk/dnsmasq.git 
+          sudo chmod +x ./SSL/SSL-Domain-Creation.sh
+          sudo ./SSL/SSL-Domain-Creation.sh
+
+          
 
