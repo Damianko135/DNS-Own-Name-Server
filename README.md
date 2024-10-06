@@ -27,4 +27,3 @@ If you encounter any issues or have questions about using these configurations, 
 ## Disclaimer
 
 While every effort has been made to ensure the accuracy and reliability of the configurations provided, the author cannot be held responsible for any problems or damages resulting from their use. Use at your own risk.
-
